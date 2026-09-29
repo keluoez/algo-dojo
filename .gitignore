@@ -1,0 +1,15 @@
+# 运行时数据（启动时自动建表重建）
+data/app.db
+
+# AI 工具本地工作区（内部记忆与截图，不发布）
+.workbuddy/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# 日志
+*.log

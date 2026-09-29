@@ -1,0 +1,4 @@
+{
+  "type": "module",
+  "comment": "标记本目录为 ESM：Node（协议测试、Remotion 渲染）需要它，浏览器不受影响。"
+}

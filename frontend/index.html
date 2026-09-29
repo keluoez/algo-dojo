@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>算法修炼场</title>
+  <link rel="stylesheet" href="/vendor/codemirror/codemirror.min.css?v=20" />
+  <link rel="stylesheet" href="/css/style.css?v=20" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/home">
+        <span class="brand-mark">⚡</span>
+        <span class="brand-name">算法修炼场</span>
+      </a>
+      <nav class="mainnav" id="mainnav">
+        <a href="#/home" data-route="home">首页</a>
+        <a href="#/ds" data-route="ds">数据结构</a>
+        <a href="#/algo" data-route="algo">算法</a>
+        <a href="#/anim" data-route="anim">动画</a>
+        <a href="#/review" data-route="review">错题本</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="app-main"></main>
+
+  <div id="toast-stack" class="toast-stack"></div>
+
+  <!-- 第三方库（本地 vendor，无构建步骤） -->
+  <script src="/vendor/marked.min.js?v=20"></script>
+  <script src="/vendor/echarts.min.js?v=20"></script>
+  <script src="/vendor/codemirror/codemirror.min.js?v=20"></script>
+  <script src="/vendor/codemirror/matchbrackets.min.js?v=20"></script>
+  <script src="/vendor/codemirror/closebrackets.min.js?v=20"></script>
+  <script src="/vendor/codemirror/python.min.js?v=20"></script>
+
+  <!-- 应用脚本：全局对象协作，按依赖顺序加载 -->
+  <script src="/js/api.js?v=20"></script>
+  <script src="/js/ui.js?v=20"></script>
+  <script src="/js/pyodide-runner.js?v=20"></script>
+  <script src="/js/views/home.js?v=20"></script>
+  <script src="/js/views/catalog.js?v=20"></script>
+  <script src="/js/views/topic.js?v=20"></script>
+  <script src="/js/views/problem.js?v=20"></script>
+  <script src="/js/views/review.js?v=20"></script>
+  <script src="/js/app.js?v=20"></script>
+  <!-- 动画模块（ESM：Remotion 渲染工程 import 同一份算法层） -->
+  <script type="module" src="/js/anim/views.js?v=20"></script>
+</body>
+</html>
