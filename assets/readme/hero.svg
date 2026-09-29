@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" font-family="'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif">
+  <!-- 算法修炼场首屏：暖纸底编辑风，母题 = 可视化小图 + 判题通过 -->
+  <rect width="1200" height="340" fill="#FFFDF7"/>
+
+  <!-- 左：标题区 -->
+  <text x="64" y="100" font-size="54" font-weight="700" fill="#2D2A26">算法修炼场</text>
+  <text x="64" y="138" font-size="19" fill="#C2410C">概念 → 示例 → 在线答题（Python）→ 错题复盘</text>
+  <text x="64" y="170" font-size="15" fill="#8A8578">把算法练成肌肉记忆的本地学习平台：判题在浏览器内完成，代码不出本机。</text>
+
+  <g font-size="13" fill="#2D2A26">
+    <rect x="64" y="258" width="96" height="26" rx="13" fill="#F4EBDD"/>
+    <text x="112" y="275" text-anchor="middle">20 个知识点</text>
+    <rect x="170" y="258" width="96" height="26" rx="13" fill="#F4EBDD"/>
+    <text x="218" y="275" text-anchor="middle">63 道精写题</text>
+    <rect x="276" y="258" width="126" height="26" rx="13" fill="#F4EBDD"/>
+    <text x="339" y="275" text-anchor="middle">87 个现场跑示例</text>
+    <rect x="412" y="258" width="146" height="26" rx="13" fill="#E8F7EE"/>
+    <text x="485" y="275" text-anchor="middle" fill="#15803D">✓ Pyodide 本地判题</text>
+  </g>
+
+  <!-- 右：单调栈柱状可视化 + 二叉树 + 通过徽章 -->
+  <rect x="660" y="48" width="220" height="150" rx="10" fill="#FFFFFF" stroke="#EAE5D9"/>
+  <text x="676" y="74" font-size="13" fill="#8A8578">单调栈：下一个更大元素</text>
+  <g>
+    <rect x="676" y="150" width="26" height="30" fill="#F4EBDD" stroke="#C2410C"/>
+    <rect x="710" y="128" width="26" height="52" fill="#F4EBDD" stroke="#C2410C"/>
+    <rect x="744" y="96"  width="26" height="84" fill="#C2410C"/>
+    <rect x="778" y="140" width="26" height="40" fill="#F4EBDD" stroke="#C2410C"/>
+    <rect x="812" y="112" width="26" height="68" fill="#F4EBDD" stroke="#C2410C"/>
+    <text x="689" y="188" font-size="10" fill="#8A8578" text-anchor="middle">3</text>
+    <text x="723" y="188" font-size="10" fill="#8A8578" text-anchor="middle">5</text>
+    <text x="757" y="188" font-size="10" fill="#8A8578" text-anchor="middle">9</text>
+    <text x="791" y="188" font-size="10" fill="#8A8578" text-anchor="middle">4</text>
+    <text x="825" y="188" font-size="10" fill="#8A8578" text-anchor="middle">7</text>
+  </g>
+
+  <rect x="900" y="48" width="180" height="150" rx="10" fill="#FFFFFF" stroke="#EAE5D9"/>
+  <text x="916" y="74" font-size="13" fill="#8A8578">二叉树遍历</text>
+  <g stroke="#2D2A26" stroke-width="1.5" fill="none">
+    <line x1="990" y1="96" x2="950" y2="126"/><line x1="990" y1="96" x2="1030" y2="126"/>
+    <line x1="950" y1="126" x2="930" y2="156"/><line x1="950" y1="126" x2="970" y2="156"/>
+    <line x1="1030" y1="126" x2="1010" y2="156"/><line x1="1030" y1="126" x2="1050" y2="156"/>
+  </g>
+  <g fill="#FFFDF7" stroke="#2D2A26" stroke-width="1.5">
+    <circle cx="990" cy="92" r="13"/><circle cx="950" cy="126" r="13"/><circle cx="1030" cy="126" r="13"/>
+    <circle cx="930" cy="160" r="13"/><circle cx="970" cy="160" r="13"/><circle cx="1010" cy="160" r="13"/><circle cx="1050" cy="160" r="13"/>
+  </g>
+  <g font-size="10" fill="#2D2A26" text-anchor="middle">
+    <text x="990" y="96">1</text><text x="950" y="130">2</text><text x="1030" y="130">3</text>
+    <text x="930" y="164">4</text><text x="970" y="164">5</text><text x="1010" y="164">6</text><text x="1050" y="164">7</text>
+  </g>
+
+  <rect x="660" y="216" width="420" height="30" rx="15" fill="#E8F7EE"/>
+  <text x="870" y="235" font-size="13" fill="#15803D" text-anchor="middle">✓ 63/63 道题参考解通过全部用例 · 死循环自动超时终止</text>
+
+  <text x="870" y="275" font-size="13" fill="#8A8578" text-anchor="middle">FastAPI · 原生 sqlite3 · Pyodide Web Worker · ECharts · Markdown+YAML 内容即代码</text>
+</svg>

@@ -1,15 +1,21 @@
-# 算法修炼场
+<p align="center">
+  <img src="assets/readme/hero.svg" width="100%" alt="算法修炼场：概念 → 示例 → 在线答题 → 错题复盘，把算法练成肌肉记忆">
+</p>
 
-把算法练成肌肉记忆的本地学习平台：**概念 → 示例 → 在线答题（Python）→ 错题复盘**。
+**算法修炼场**——把算法练成肌肉记忆的本地学习平台：**概念 → 示例 → 在线答题（Python）→ 错题复盘**。
+
+看讲解"看会了"不等于会写：这里的每一题都要亲手写、当场判卷、错了进错题本复盘。判题在**浏览器内 Pyodide** 完成——不需要在本机配 Python 环境，代码不出本机，打开网页就能刷。
 
 ## 快速开始
 
 ```bash
-pip install -r requirements.txt   # fastapi / uvicorn / pyyaml
+pip install -r requirements.txt   # fastapi / uvicorn / pyyaml / pydantic / httpx
 run.bat                           # Windows 一键启动，自动打开 http://127.0.0.1:8767
 ```
 
 或手动：`python -m uvicorn backend.main:app --host 127.0.0.1 --port 8767`。
+
+首次启动自动建库（`data/app.db`）并加载全部内容，无需任何配置与外部依赖。
 
 ## 平台里有什么
 
@@ -21,17 +27,19 @@ run.bat                           # Windows 一键启动，自动打开 http://1
   现场跑（如链表的头插/按位插入/按值删/按位删/改值/查找/找中点），
   输出由 `check_content` 离线跑一遍比对，示例不会与代码脱节
 - **63 道精写编程题**：每题含题面、starter、测试用例、参考解、复杂度与易错点；
-  **题解不设门禁**，随时可看
-- **浏览器内 Pyodide 判题**：代码不出本机，死循环自动超时终止；函数题与类设计题两种形态
+  **题解不设门禁**，随时可看；题面与题解物理分离，先想再看，防剧透
+- **浏览器内 Pyodide 判题**：代码不出本机，死循环自动超时终止并重建 Worker；函数题与类设计题两种形态
 - **性能实测**：多份解法同场对比，ECharts 出曲线（如哈希 0.1ms vs 暴力 321ms）
 - **学习看板 + 错题本**：已学标记、概念小测、掌握度自动维护
+- **内容即代码**：20 个知识点与 63 道题全部是 Markdown + YAML frontmatter，启动时
+  Pydantic 校验 fail-fast——改内容改 Markdown 即可，不需要动数据库
 
 ## 测试
 
 ```bash
 python -m tests.check_content          # 63 道参考解必须通过全部用例 + 87 个操作示例跑通
 python -m tests.check_worker_protocol  # 用 CPython 跑 worker 里的判题/示例模板，校验协议
-python -m tests.smoke_test             # 390 项端到端断言（自动用临时 DB）
+python -m tests.smoke_test             # 端到端断言（自动用临时 DB）
 ```
 
 依赖都在 `requirements.txt` 里（含测试用的 httpx）；`python -m tests.smoke_test`
