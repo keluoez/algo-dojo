@@ -8,14 +8,38 @@
 
 ## 快速开始
 
+**前置要求**：Python 3.11+（Windows 安装时勾选 *Add to PATH*）、现代浏览器。**不需要**数据库、不需要任何 API Key——内容随仓库分发，判题在浏览器内完成。
+
+**1 · 安装依赖**
+
 ```bash
-pip install -r requirements.txt   # fastapi / uvicorn / pyyaml / pydantic / httpx
-run.bat                           # Windows 一键启动，自动打开 http://127.0.0.1:8767
+# Windows（cmd 或 PowerShell）
+pip install -r requirements.txt
+
+# Linux / macOS
+python3 -m pip install -r requirements.txt
 ```
 
-或手动：`python -m uvicorn backend.main:app --host 127.0.0.1 --port 8767`。
+**2 · 启动服务**
 
-首次启动自动建库（`data/app.db`）并加载全部内容，无需任何配置与外部依赖。
+```bash
+# Windows（cmd 或 PowerShell）
+python -m uvicorn backend.main:app --host 127.0.0.1 --port 8767
+
+# Linux / macOS
+python3 -m uvicorn backend.main:app --host 127.0.0.1 --port 8767
+```
+
+**3 · 验证**：浏览器打开 <http://127.0.0.1:8767>，看到「学习看板」首页即成功。首次启动自动建库（`data/app.db`）并加载 20 个知识点 + 63 道题，无需任何配置。
+
+### 常见问题
+
+| 现象 | 处理 |
+| --- | --- |
+| Windows 输入 `python` 弹出 Microsoft Store | 用 `py -3` 代替 `python`，或重装 Python 时勾选 *Add to PATH* |
+| Linux 报 `externally-managed-environment` | `python3 -m venv .venv && source .venv/bin/activate` 后再安装 |
+| 端口被占用 | 把 `--port 8767` 换成其他端口 |
+| pip 下载慢（国内网络） | 安装命令追加 `-i https://pypi.tuna.tsinghua.edu.cn/simple` |
 
 ## 平台里有什么
 
